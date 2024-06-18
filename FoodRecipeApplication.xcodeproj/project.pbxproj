@@ -11,6 +11,7 @@
 		949DB8482C203C7A00D22813 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949DB8472C203C7A00D22813 /* ContentView.swift */; };
 		949DB84A2C203C7B00D22813 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 949DB8492C203C7B00D22813 /* Assets.xcassets */; };
 		949DB84D2C203C7B00D22813 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 949DB84C2C203C7B00D22813 /* Preview Assets.xcassets */; };
+		949DB8932C219C6C00D22813 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949DB8922C219C6C00D22813 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		949DB8472C203C7A00D22813 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		949DB8492C203C7B00D22813 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		949DB84C2C203C7B00D22813 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		949DB8922C219C6C00D22813 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				949DB8452C203C7A00D22813 /* FoodRecipeApplicationApp.swift */,
 				949DB8472C203C7A00D22813 /* ContentView.swift */,
+				949DB8922C219C6C00D22813 /* Model.swift */,
 				949DB8492C203C7B00D22813 /* Assets.xcassets */,
 				949DB84B2C203C7B00D22813 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				949DB8932C219C6C00D22813 /* Model.swift in Sources */,
 				949DB8482C203C7A00D22813 /* ContentView.swift in Sources */,
 				949DB8462C203C7A00D22813 /* FoodRecipeApplicationApp.swift in Sources */,
 			);
