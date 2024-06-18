@@ -14,6 +14,7 @@
 		949DB8932C219C6C00D22813 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949DB8922C219C6C00D22813 /* Model.swift */; };
 		949DB8952C21A89F00D22813 /* Color-Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949DB8942C21A89F00D22813 /* Color-Theme.swift */; };
 		949DB8972C21A9C500D22813 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949DB8962C21A9C500D22813 /* ApiService.swift */; };
+		949DB8992C21AB5600D22813 /* FoodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949DB8982C21AB5600D22813 /* FoodViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		949DB8922C219C6C00D22813 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		949DB8942C21A89F00D22813 /* Color-Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Theme.swift"; sourceTree = "<group>"; };
 		949DB8962C21A9C500D22813 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		949DB8982C21AB5600D22813 /* FoodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				949DB8452C203C7A00D22813 /* FoodRecipeApplicationApp.swift */,
 				949DB8472C203C7A00D22813 /* ContentView.swift */,
 				949DB8962C21A9C500D22813 /* ApiService.swift */,
+				949DB8982C21AB5600D22813 /* FoodViewModel.swift */,
 				949DB8942C21A89F00D22813 /* Color-Theme.swift */,
 				949DB8922C219C6C00D22813 /* Model.swift */,
 				949DB8492C203C7B00D22813 /* Assets.xcassets */,
@@ -148,6 +151,7 @@
 			files = (
 				949DB8932C219C6C00D22813 /* Model.swift in Sources */,
 				949DB8972C21A9C500D22813 /* ApiService.swift in Sources */,
+				949DB8992C21AB5600D22813 /* FoodViewModel.swift in Sources */,
 				949DB8482C203C7A00D22813 /* ContentView.swift in Sources */,
 				949DB8462C203C7A00D22813 /* FoodRecipeApplicationApp.swift in Sources */,
 				949DB8952C21A89F00D22813 /* Color-Theme.swift in Sources */,
