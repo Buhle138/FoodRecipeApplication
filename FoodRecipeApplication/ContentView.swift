@@ -7,59 +7,70 @@
 
 import SwiftUI
 
+ 
+
 struct ContentView: View {
     
-    let columns = [
-        GridItem(.adaptive(minimum: 150))
-    ]
+    @ObservedObject var food: ApiService
     
-    let missions = ["Buhle", "Yes", "THree", "Fourr", "Five", "Six", "Seven", "eight", "Ninge", "Ten", "Eleven", "Twelve", "Thirteen", "Fasd"]
+    let columns: [GridItem] = Array(repeating: .init(.flexible()), count: 2)
     
     var body: some View {
+        
         NavigationView{
+            
             ScrollView{
-                LazyVGrid(columns: columns){
-                    ForEach(missions, id: \.self) {missions in
-                        NavigationLink {
-                        } label: {
-                            VStack{
-//                                Image(missions.image)
-//                                    .resizable()
-//                                    .scaledToFit()
-//                                    .frame(width: 100, height: 100)
-//                                    .padding()
-                                
+                VStack{
+                    LazyVGrid(columns: columns){
+                       
+                        ForEach(food.foodItems ?? [Category](), id: \.idCategory){
+                            foodItem in
+                            NavigationLink{
+                               DetailScreenView(category: foodItem)
+                            }label: {
                                 VStack{
-                                    Text("Buhle")
-                                        .font(.headline)
-                                        .foregroundColor(.white)
+                                    AsyncImage(url: URL(string: foodItem.strCategoryThumb)) { image in
+                                        image
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fit)
+                                            .clipShape(Circle())
+                                        
+                                    } placeholder: {
+                                        Circle()
+                                            .foregroundColor(.secondary)
+                                    }
+                                    .frame(width: 120, height: 120)
                                     
-                                    Text(missions)
-                                        .font(.caption)
-                                        .foregroundColor(.white.opacity(0.5))
+                                    Text(foodItem.strCategory)
+                                        .frame(maxHeight: .infinity, alignment: .top)
                                 }
-                                .padding(.vertical)
-                                .frame(maxWidth: .infinity)
-                                .background(.lightBackground)
                             }
-                            .clipShape(RoundedRectangle(cornerRadius: 10))
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 10)
-                                    .stroke(.lightBackground)
-                            )
+                            
+                            
                         }
-                        
                     }
                 }
-                .padding([.horizontal, .bottom])
             }
-            .navigationTitle("Food items")
+            .navigationTitle("Food Recipes")
         }
+        .onAppear{
+            Task {
+                try?  await food.getAll()
+            }
+          
+        }
+        .onSubmit {
+            Task {
+                try? await food.getAll()
+            }
+            
+        }
+        
     }
+        
     
-    struct ContentView_Previews: PreviewProvider {
-        static var previews: some View {
-            ContentView()
-        }
-    }
 }
+                                   
+        
+
+        
