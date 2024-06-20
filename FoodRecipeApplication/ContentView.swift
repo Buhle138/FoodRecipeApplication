@@ -59,12 +59,6 @@ struct ContentView: View {
             }
           
         }
-        .onSubmit {
-            Task {
-                try? await food.getAll()
-            }
-            
-        }
         
     }
         
