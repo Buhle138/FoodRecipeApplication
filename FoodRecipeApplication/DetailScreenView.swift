@@ -34,12 +34,14 @@ struct DetailScreenView: View {
                         VStack(alignment: .leading){
                             Text("\(category.strCategory) Details")
                                 .font(.title.bold())
-                                .padding(.bottom, 5)
+                                .padding()
                             Text(category.strCategoryDescription)
+                                .padding()
                         }
                     }
                     
                 }
+               
             
             
         }
